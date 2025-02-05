@@ -6,8 +6,8 @@ class Solution:
         if len(s) != len(t):
             return False
         for i in range(len(s)):
-            keyS = ord(s[i])
-            keyT = ord(t[i])
+            keyS = s[i]
+            keyT = t[i]
             if keyS in hashMapS.keys():
                 hashMapS[keyS] += 1
             else:
@@ -18,10 +18,17 @@ class Solution:
             else:
                 hashMapT[keyT] = 1
 
-        for i in hashMapS.keys():
-            if i in hashMapT.keys():
-                if hashMapS[i] != hashMapT[i]:
-                    return False
-            else:
-                return False
-        return True
+
+        print(hashMapS)
+        print(hashMapT)
+        if hashMapS == hashMapT:
+            return True
+        return False
+        
+        # for i in hashMapS.keys():
+        #     if i in hashMapT.keys():
+        #         if hashMapS[i] != hashMapT[i]:
+        #             return False
+        #     else:
+        #         return False
+        # return True
