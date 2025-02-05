@@ -18,6 +18,7 @@ class Solution:
             else:
                 hashMapT[keyT] = 1
 
+
         print(hashMapS)
         print(hashMapT)
         if hashMapS == hashMapT:

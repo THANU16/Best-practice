@@ -9,8 +9,6 @@ class Solution:
         direction = [(0,1), (1,0), (0,-1), (-1,0)]  #Right, Down, Left, Up
         row , col = 0, 0
         dirId = 0 
-        
-                
         if head == None:
             return matrix
         node = head
