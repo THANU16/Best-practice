@@ -1,22 +1,16 @@
 class Solution:
     def calPoints(self, operations: List[str]) -> int:
-        record = []
-        count = -1
+        stack = []
         for i in operations:
-            if i == \C\:
-                record.pop()
-                count -= 1
-            elif i ==\D\:
-                temp = record[count]
-                record.append(2*temp)
-                count +=1
-            elif i == \+\:
-                record.append(record[count] + record[count-1])
-                count +=1
+            if i == 'C':
+                stack.pop()
+            elif i == 'D':
+                stack.append(int(stack[-1])*2)
+            elif i == '+':
+                stack.append(int(stack[-1])+int(stack[-2]))
             else:
-                record.append(int(i))
-                count +=1
-        return sum(record)
+                stack.append(int(i))
+        return sum(stack)
 
             
         

@@ -18,3 +18,4 @@ class Solution:
         result_str = \\.join(map(str, result)).lstrip(\0\)
         
         return result_str if result_str else \0\
+
